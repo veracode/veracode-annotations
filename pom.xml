@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.veracode.annotation</groupId>
+	<artifactId>VeracodeAnnotations</artifactId>
+	<version>1.0.4</version>
+
+	<name>${project.groupId}:${project.artifactId}</name>
+	<description>Annotations used by Veracode's software analysis framework</description>
+	<url>http://github.com/veracode/veracode-annotations</url>
+
+	<developers>
+		<developer>
+			<name>Veracode</name>
+			<email>veracode@statik.awsapps.com</email>
+			<organization>Veracode</organization>
+			<organizationUrl>https://www.veracode.com</organizationUrl>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
+
+	<scm>
+  		<connection>scm:git:git://github.com/veracode/veracode-annotations.git</connection>
+		<developerConnection>scm:git:ssh://github.com/veracode/veracode-annotations.git</developerConnection>
+		<url>http://github.com/veracode/veracode-annotations/tree/master</url>
+	</scm>
+
+	<build>
+		<directory>./bin</directory>
+		<outputDirectory>./bin/main</outputDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<outputDirectory>./bin</outputDirectory>
+					<archive>
+						<manifestFile>./META-INF/MANIFEST.MF</manifestFile>
+					       	<manifestEntries>
+                        						<Built-By>veracode</Built-By>
+                       					</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+<!--
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.10.4</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+-->
+		</plugins>
+
+		<resources>
+		    	<resource>
+		        		<directory>.</directory>
+				<includes>
+		          			<include>license.txt</include>
+				</includes>
+			</resource>        
+		</resources> 
+	</build>
+
+	<properties>
+        		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+</project>
