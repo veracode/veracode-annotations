@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.veracode.annotation</groupId>
 	<artifactId>VeracodeAnnotations</artifactId>
-	<version>1.0.4</version>
+	<version>1.2.1</version>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Annotations used by Veracode's software analysis framework</description>

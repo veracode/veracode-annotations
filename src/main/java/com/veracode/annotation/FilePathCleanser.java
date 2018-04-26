@@ -31,4 +31,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface FilePathCleanser {}
+public @interface FilePathCleanser {
+    String userComment() default "";
+    String value() default "";
+}

@@ -31,4 +31,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface CRLFCleanser {}
+public @interface CRLFCleanser {
+    String userComment() default "";
+    String value() default "";
+}
